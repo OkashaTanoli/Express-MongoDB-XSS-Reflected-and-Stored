@@ -5,8 +5,9 @@ const Task = require('./modal')
 const cors = require('cors')
 app.use(express.json())
 app.use(cors())
+require('dotenv').config()
 
-let MONGO_DB = "mongodb+srv://okasha:truckdriver12345@taskmanager.who8n.mongodb.net/storedXSS?retryWrites=true&w=majority"
+let MONGO_DB = process.env.MONGO_DB
 
 
 app.get('/api', async (req, res) => {
