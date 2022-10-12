@@ -9,7 +9,6 @@ require('dotenv').config()
 
 let MONGO_DB = process.env.MONGO_DB
 
-
 app.get('/api', async (req, res) => {
     try {
         const task = await Task.find()
